@@ -44,7 +44,12 @@
               nest_asyncio = nest-asyncio;
               pycryptodome = pycryptodome;
               pyyaml = pyyaml;
-              password_strength = (pkgs.callPackage ./password-strength {});
+              password_strength = (pkgs.callPackage ./password-strength {
+                buildPythonPackage = buildPythonPackage;
+                fetchFromGitHub = fetchFromGitHub;
+                lib = lib;
+                six = six;
+              });
               pydantic = pydantic;
               pynacl = pynacl;
               pytest-asyncio = pytest-asyncio;

@@ -35,6 +35,8 @@
 , tqdm
 , uvicorn
 , wheel
+, pip
+, setuptools
 }:
 
 buildPythonPackage rec {
@@ -46,13 +48,16 @@ buildPythonPackage rec {
       rev = "refs/tags/v${version}";
       hash = "sha256-tbtI32Lx0gnXoAUlbyEHa7a82e7fzLmuS9gMPCjJLKA";
     };
-    buildInputs = [rich];
     preBuild = ''
       rm Makefile
     '';
+    nativeBuildInputs = [
+        pip
+        setuptools
+    ];
     #pythonImportsCheck = [];
     #nativeCheckInputs = [];
-    doCheck = false;
+    doCheck = true;
     #doInstallCheck = false;
     #nativeInstallCheckInputs = [];
     meta = with lib; {

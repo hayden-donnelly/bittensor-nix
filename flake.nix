@@ -61,6 +61,8 @@
               tqdm = tqdm;
               uvicorn = uvicorn;
               wheel = wheel;
+              pip = pip;
+              setuptools = setuptools;
             })
           ]))
         ];

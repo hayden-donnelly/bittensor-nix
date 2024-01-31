@@ -62,7 +62,26 @@
               retry = retry;
               requests = requests;
               rich = rich;
-              scalecodec = (pkgs.callPackage ./scalecodec {});
+              scalecodec = (pkgs.callPackage ./scalecodec {
+                buildPythonPackage = buildPythonPackage;
+                fetchFromGitHub = fetchFromGitHub;
+                lib = lib;
+                base58 = base58;
+                atomicwrites = atomicwrites;
+                attrs = attrs;
+                coverage = coverage;
+                more-itertools = more-itertools;
+                pluggy = pluggy;
+                py = py;
+                pytest = pytest;
+                requests = requests;
+                six = six;
+                mkdocs = mkdocs;
+                mkdocs-material = mkdocs-material;
+                mkdocs-autorefs = mkdocs-autorefs;
+                mkdocstrings = mkdocstrings;
+                mkdocstrings-python = mkdocstrings-python;
+              });
               shtab = shtab;
               substrate-interface = (pkgs.callPackage ./substrate-interface {});
               termcolor = termcolor;

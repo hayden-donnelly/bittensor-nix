@@ -42,7 +42,7 @@
                 msgpack = msgpack-numpy;
               });
               nest_asyncio = nest-asyncio;
-              pycryptodome = pycryptdome;
+              pycryptodome = pycryptodome;
               pyyaml = pyyaml;
               password_strength = (pkgs.callPackage ./password-strength {});
               pydantic = pydantic;

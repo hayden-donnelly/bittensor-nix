@@ -86,6 +86,38 @@ buildPythonPackage rec {
       wheel" | cat > requirements/prod.txt
     '';
     nativeBuildInputs = [
+      aiohttp
+      ansible
+      ansible_vault
+      backoff
+      black
+      cryptography
+      ddt
+      fuzzywuzzy
+      fastapi
+      loguru
+      munch
+      netaddr
+      numpy
+      msgpack-numpy-opentensor
+      nest_asyncio
+      pycryptodome
+      pyyaml
+      password_strength
+      pydantic
+      pynacl
+      pytest-asyncio
+      python-levenshtein
+      pytest
+      retry
+      requests
+      rich
+      scalecodec
+      shtab
+      substrate-interface
+      termcolor
+      torch
+      tqdm
       uvicorn
       pip
       setuptools

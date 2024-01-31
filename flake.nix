@@ -53,7 +53,11 @@
               pydantic = pydantic;
               pynacl = pynacl;
               pytest-asyncio = pytest-asyncio;
-              python-levenshtein = (pkgs.callPackage ./python-levenshtein {});
+              python-levenshtein = (pkgs.callPackage ./python-levenshtein {
+                buildPythonPackage = buildPythonPackage;
+                fetchFromGitHub = fetchFromGitHub;
+                lib = lib;
+              });
               pytest = pytest;
               retry = retry;
               requests = requests;

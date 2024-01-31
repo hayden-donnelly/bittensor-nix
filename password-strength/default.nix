@@ -21,4 +21,3 @@ buildPythonPackage rec {
     homepage = "https://github.com/kolypto/py-password-strength";
   };
 }
-
